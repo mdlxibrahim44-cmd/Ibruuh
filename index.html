@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>ibruuh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      max-width: 430px;
+      width: 90%;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 8px;
+      background: #ff7a18;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .content {
+      display: none;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box" id="login">
+  <h1>🔒 ibruuh</h1>
+  <p>পাসওয়ার্ড লিখুন</p>
+  <input type="password" id="password" placeholder="Password">
+  <br>
+  <button onclick="checkPassword()">Enter</button>
+</div>
+
+<div class="box content" id="content">
+  <h1>ibruuh 🌿</h1>
+  <p>
+    কিছুদিন ধরে আপনার সঙ্গে কথা হয়নি,<br>
+    তাই স্বাভাবিকভাবেই আপনার কথা<br>
+    মাঝে মাঝে মনে পড়ে যায়।<br><br>
+
+    যোগাযোগ না থাকলেও,<br>
+    এই সময়টায় আপনার খোঁজটা<br>
+    মনে মনে ঠিকই রেখেছি।<br><br>
+
+    বড় কোনো কথা নয়,<br>
+    শুধু এটুকু বলা—<br>
+    আপনাকে মিস করেছি।<br><br>
+
+    আশা করি আপনি ভালো আছেন। 🌿
+  </p>
+</div>
+
+<script>
+  function checkPassword() {
+    var pass = document.getElementById("password").value;
+    if (pass === "6116") {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    } else {
+      alert("ভুল পাসওয়ার্ড ❌");
+    }
+  }
+
+  document.getElementById("password").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      checkPassword();
+    }
+  });
+</script>
+
+</body>
+</html>
